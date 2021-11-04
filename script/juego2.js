@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 function checkearNumero() {
 
     let inputNumero = document.getElementById('inputNumero');
-    let adivinaste = document.getElementById('adivinaste');
+    
 
     console.log(inputNumero.value)
 
