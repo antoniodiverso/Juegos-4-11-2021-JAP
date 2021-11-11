@@ -1,6 +1,11 @@
 let numeroRandom;
 let vidas = 10;
 
+document.addEventListener("DOMContentLoaded", function (e) {
+
+    numeroRandom = Math.floor(Math.random() * 100);
+
+});
 
 
 
@@ -34,7 +39,4 @@ function checkearNumero() {
         console.log(vidas);
     }
 }
-
-
-
 

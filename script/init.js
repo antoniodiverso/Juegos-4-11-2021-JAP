@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 document.getElementById("singin").addEventListener("click", function (event) {
-    event.preventDefault();
+    
     let usuarioIn = document.getElementById("inputEmail");
     let contraseñaIn = document.getElementById("inputPassword");
 
@@ -48,18 +48,22 @@ document.getElementById("singin").addEventListener("click", function (event) {
         if (usuario.user == usuarioIn.value) {
             usuarioIn.classList.remove("alert-danger")
             document.getElementById("emailIncorrecto").innerHTML = '';
-            
+
             if (usuario.password == contraseñaIn.value) {
                 contraseñaIn.classList.remove("alert-danger")
                 document.getElementById("passwordIncorrecta").innerHTML = '';
                 alert("Ingresado con exito!")
             }
             else {
+                event.preventDefault();
+                event.stopPropagation();
                 document.getElementById("passwordIncorrecta").innerHTML = '';
                 contraseñaIn.classList.add("alert-danger")
                 document.getElementById("passwordIncorrecta").innerHTML += 'Contraseña Incorrecta';
             }
         } else {
+            event.preventDefault();
+            event.stopPropagation();
             document.getElementById("emailIncorrecto").innerHTML = '';
             usuarioIn.classList.add("alert-danger")
             document.getElementById("emailIncorrecto").innerHTML += 'Usuario Incorrecto';
