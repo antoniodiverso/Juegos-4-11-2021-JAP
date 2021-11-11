@@ -52,11 +52,11 @@ document.getElementById("singin").addEventListener("click" ,function(event){
             }
             else{
                 contraseñaIn.classList.add("alert-danger")
-                contraseñaIn.setAttribute("placeholder", "Contraseña incorrecta");
+                usuarioIn.placeholder = 'Contraseña Incorrecto';
             }
         }else{
             usuarioIn.classList.add("alert-danger")
-            usuarioIn.setAttribute("placeholder", "Usuario incorrecta");
+            usuarioIn.placeholder = 'Usuario Incorrecto';
         }
         
     });
