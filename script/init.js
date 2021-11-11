@@ -1,9 +1,9 @@
 let UsuariosURL = "https://danikho2020.github.io/json/user.json";
-
+let users = [];
 
 var getJSONData = function(url){
     var result = {};
-    showSpinner();
+
     return fetch(url)
     .then(response => {
       if (response.ok) {
@@ -15,15 +15,54 @@ var getJSONData = function(url){
     .then(function(response) {
           result.status = 'ok';
           result.data = response;
-          hideSpinner();
+         
           return result;
     })
     .catch(function(error) {
         result.status = 'error';
         result.data = error;
-        hideSpinner();
+
         return result;
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function (e) {
+
+    getJSONData(UsuariosURL).then(function(resultObj){
+        if (resultObj.status === "ok"){
+           users.push (resultObj.data[0]);
+        }
+    });
+
+
+});
+
+document.getElementById("singin").addEventListener("click" ,function(event){
+    event.preventDefault();
+    let usuarioIn = document.getElementById("inputEmail");
+    let contraseñaIn = document.getElementById("inputPassword");
+
+    users.forEach(usuario => {
+        if (usuario.user == usuarioIn.value){
+            usuarioIn.classList.remove("alert-danger")
+            if (usuario.password == contraseñaIn.value){
+                contraseñaIn.classList.remove("alert-danger")
+                alert("jaja")
+            }
+            else{
+                contraseñaIn.classList.add("alert-danger")
+                contraseñaIn.setAttribute("placeholder", "Contraseña incorrecta");
+            }
+        }else{
+            usuarioIn.classList.add("alert-danger")
+            usuarioIn.setAttribute("placeholder", "Usuario incorrecta");
+        }
+        
+    });
+
+
+});
+
 
 

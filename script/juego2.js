@@ -1,24 +1,6 @@
 let numeroRandom;
 let vidas = 10;
 
-document.addEventListener("DOMContentLoaded", function (e) {
-
-    getJSONData(UsuariosURL).then(function(resultObj){
-        if (resultObj.status === "ok"){
-           (UsuariosURL,resultObj.data)
-        }
-    });
-
-    let usuario = document.getElementById("inputEmail");
-    let contraseña = document.getElementById("inputPassword");
-
-
-
-
-    numeroRandom = Math.floor(Math.random() * 100);
-
-
-});
 
 
 
@@ -53,7 +35,6 @@ function checkearNumero() {
     }
 }
 
-document.addEventListener("DOMContentLoaded",function(e){document.getElementById("singin").addEventListener("submit"),function(){
-    
 
-}})
+
+
