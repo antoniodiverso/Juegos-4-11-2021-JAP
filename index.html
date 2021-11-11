@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Login</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" style="text-align: center;">
         <div class="row">
             <form action="" id="formulario">
                 <div class="col-12" id="emailGrilla">
                     <div class="row">
 
                         <div class="col-12">
-                            <img id="imglogin" src="img/login.png" />
+                            <img id="imglogin" src="data:image/png;base64,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" />
                         </div>
                         <div class="col-12">
                             <h2 class="">Inicio de sesión</h2>
@@ -54,10 +57,10 @@
                     <div class="row">
 
                         <div class="col-12">
-                            <label><input type="checkbox" value="remember-me"> Recuerdame</label>
+                            <label><input type="checkbox" value="remember-me">Recuerdame</label>
                         </div>
                         <div class="col-12">
-                            <button id="singin" type="submit" class="btn btn-info">Entrar</button>
+                            <br><button id="singin" type="submit" class="btn btn-info">Entrar</button>
                         </div>
                     </div>
                 </div>
