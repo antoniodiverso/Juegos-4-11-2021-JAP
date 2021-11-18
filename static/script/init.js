@@ -1,4 +1,4 @@
-let UsuariosURL = "https://danikho2020.github.io/json/user.json";
+let UsuariosURL = "/usuarios.json";
 let users = [];
 
 var getJSONData = function (url) {
