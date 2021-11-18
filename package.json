@@ -1,0 +1,23 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniodiverso/Juegos-4-11-2021-JAP.git"
+  },
+  "author": "Los mejores E E E",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniodiverso/Juegos-4-11-2021-JAP/issues"
+  },
+  "homepage": "https://github.com/antoniodiverso/Juegos-4-11-2021-JAP#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
