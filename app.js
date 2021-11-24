@@ -4,18 +4,24 @@ const app = express();
 const port = 3000;
 app.use(express.static(__dirname + "/static"));
 
-app.get("/", (req, res) => {
-    res.send()
+app.use((req ,res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    next();
 
-})
+});
+
+app.get("/", (req, res) => {
+    res.send();
+
+});
 
 app.get("/usuarios", (req, res) => {
-    res.send(loginJson)
+    res.send(loginJson);
 
-})
+});
 
 
 
 app.listen(port, () => {
-    console.log("Escuchando a http://localhost:" + port)
+    console.log("Escuchando a http://localhost:" + port);
 });
